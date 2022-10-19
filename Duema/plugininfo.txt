@@ -1,0 +1,142 @@
+<plugin>
+
+<gamezone>
+      <label>Hand</label>
+     <visibletoowner>yes</visibletoowner>
+     <visibletoothers>no</visibletoothers>
+</gamezone>
+
+<deckzone>
+     <label>Deck</label>
+     <shuffle>yes</shuffle>
+</deckzone>
+
+<deckzone>
+     <label>Hyperspatial</label>
+     <shuffle>no</shuffle>
+</deckzone>
+
+<deckzone>
+     <label>Gacharange</label>
+     <shuffle>yes</shuffle>
+</deckzone>
+
+<gamezone>
+	<label>Deck</label>
+	<visibletoowner>no</visibletoowner>
+        <visibletoothers>no</visibletoothers>
+</gamezone>
+
+<gamezone>
+      <label>Graveyard</label>
+      <visibletoowner>yes</visibletoowner>
+      <visibletoothers>yes</visibletoothers>
+</gamezone>
+
+<gamezone>
+      <label>Mana</label>
+      <visibletoowner>yes</visibletoowner>
+      <visibletoothers>yes</visibletoothers>
+</gamezone>
+
+<gamezone>
+      <label>Shields</label>
+      <visibletoowner>no</visibletoowner>
+      <visibletoothers>no</visibletoothers>
+</gamezone>
+
+<gamezone>
+	<label>Hyperspatial</label>
+	<visibletoowner>yes</visibletoowner>
+        <visibletoothers>yes</visibletoothers>
+</gamezone>
+
+<gamezone>
+	<label>Gacharange</label>
+	<visibletoowner>no</visibletoowner>
+	<visibletoothers>no</visibletoothers>
+</gamezone>
+
+<phase><label>Untap</label></phase>
+<phase><label>Draw</label></phase>
+<phase><label>Charge</label></phase>
+<phase><label>Main</label></phase>
+<phase><label>Attack</label></phase>
+<phase><label>End</label></phase>
+
+<generalfunction>
+	<label>Draw</label>
+	<kind>DRAWCARD</kind>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+<generalfunction>
+	<label>Untap All</label>
+	<kind>ALLYOURCARDSMAKERIGHT0DEGREES</kind>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<cardfunction>
+	<label>Untap</label>
+	<kind>MAKERIGHT0DEGREES</kind>
+	<includeasbutton>yes</includeasbutton>
+</cardfunction>
+<cardfunction>
+	<label>Tap</label>
+	<kind>MAKERIGHT270DEGREES</kind>
+	<includeasbutton>yes</includeasbutton>
+</cardfunction>
+<cardfunction>
+	<label>Flip</label>
+	<kind>TURNOVER</kind>
+	<includeasbutton>yes</includeasbutton>
+</cardfunction>
+<generalfunction>
+	<label>Gacharange Summon</label>
+	<kind>TRANSFERCARD</kind>                 
+	<sourceowner>performer</sourceowner>
+	<sourcegamezone>Gacharange</sourcegamezone>
+	<sourceposition>top</sourceposition>                 
+	<destinationowner>table</destinationowner>
+	<destinationposition>faceup</destinationposition>
+	<includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<generalfunction>
+	<label>Shieldify Top Card</label>
+	<kind>TRANSFERCARD</kind>                 
+	<sourceowner>performer</sourceowner>
+	<sourcegamezone>Deck</sourcegamezone>
+	<sourceposition>top</sourceposition>                 
+	<destinationowner>performer</destinationowner>
+        <destinationgamezone>Shields</destinationgamezone>
+        <destinationposition>top</destinationposition>
+        <includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<generalfunction>
+	<label>Send Top Card to Mana</label>
+	<kind>TRANSFERCARD</kind>                 
+	<sourceowner>performer</sourceowner>
+	<sourcegamezone>Deck</sourcegamezone>
+	<sourceposition>top</sourceposition>                 
+	<destinationowner>performer</destinationowner>
+        <destinationgamezone>Mana</destinationgamezone>
+        <destinationposition>top</destinationposition>
+        <includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<generalfunction>
+	<label>Mill 1</label>
+	<kind>TRANSFERCARD</kind>                 
+	<sourceowner>performer</sourceowner>
+	<sourcegamezone>Deck</sourcegamezone>
+	<sourceposition>top</sourceposition>                 
+	<destinationowner>performer</destinationowner>
+        <destinationgamezone>Graveyard</destinationgamezone>
+        <destinationposition>top</destinationposition>
+        <includeasbutton>yes</includeasbutton>
+</generalfunction>
+
+<definition><kind>ISALLOWINGMULTIPLECARDBACKS</kind></definition>
+
+</plugin>

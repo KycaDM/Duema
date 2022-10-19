@@ -1,0 +1,8 @@
+<version>
+
+<lastupdateYYMMDD>221018</lastupdateYYMMDD>
+<quality>HIGH</quality>
+<versionurl>http://127.0.0.1/plugins/Duema/version.txt</versionurl>
+<updateurl>http://127.0.0.1/plugins/Duema/updatelist.txt</updateurl>
+<message>Duema v1</message>
+</version>
